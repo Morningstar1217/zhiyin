@@ -1,0 +1,35 @@
+<!-- pages/goods/goods.wxml -->
+<!-- 搜索 -->
+<view class="search-view">
+    <view class="search-content">
+        <image src="/images/search-pic.png" class="search-icon" />
+        <input placeholder="请输入搜索内容" class="search-input" maxlength="30" confirm-type="搜索" bindinput='listenerSearchInput' bindconfirm='toSearch'></input>
+        <button class='search-btn' bindtap="toSearch">搜索</button>
+    </view>
+</view>
+<!-- 商品分类 -->
+<view class="type-container">
+    <scroll-view class="type-navbar" scroll-x="true">
+    <view class="type-box" wx:for-items="{{categories}}" wx:key="id">
+        <view id="{{item.id}}" class="type-navbar-item {{activeCategoryId == item.id ? 'type-item-on' : ''}}" bindtap="tabClick">
+            {{item.name}}
+        </view>
+    </view>
+    </scroll-view>
+</view>
+<view class="container">
+    <view class="goods-container">
+        <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+            <view class="img-box">
+                <image src="{{item.pic}}_m" class="image" mode="aspectFill" lazy-load="true" />
+            </view>
+            <view class="goods-title">{{item.name}}</view>
+            <view style='display:flex;'>
+                <view class="goods-price">¥ {{item.minPrice}}</view>
+                <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>
+                    ¥ {{item.originalPrice}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

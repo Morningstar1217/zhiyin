@@ -1,0 +1,7 @@
+/* pages/fav/fav.wxss */
+
+@import '/pages/index/index.wxss';
+.goods-box {
+    height: auto;
+    padding-bottom: 10px;
+}

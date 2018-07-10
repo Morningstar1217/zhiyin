@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="goods-container">
+    <view class="goods-box" wx:for-items="{{favGoods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.goodsId}}">
+      <view class="img-box">
+        <image src="{{item.pic}}_m" class="image" mode="aspectFill" lazy-load="true" />
+      </view>
+      <view class="goods-title">{{item.goodsName}}</view>
+      <!-- <view style='display:flex;'>
+        <view class="goods-price">¥ {{item.minPrice}}</view>
+        <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>
+          ¥ {{item.originalPrice}}
+        </view>
+      </view> -->
+    </view>
+  </view>
+  <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-goods">没有更多啦</view>
+</view>
