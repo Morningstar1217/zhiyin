@@ -3,11 +3,10 @@
 var app = getApp()
 Page({
   data: {
-    coupons:[]
+    coupons: []
   },
-  onLoad: function () {
-  },
-  onShow : function () {
+  onLoad: function () {},
+  onShow: function () {
     this.getMyCoupons();
   },
   getMyCoupons: function () {
@@ -30,7 +29,7 @@ Page({
       }
     })
   },
-  goBuy:function(){
+  goBuy: function () {
     wx.reLaunch({
       url: '/pages/index/index'
     })

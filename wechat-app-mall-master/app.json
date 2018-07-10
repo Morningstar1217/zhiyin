@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/my/index",
     "pages/start/start",
+    "pages/mycoupons/index",
     "pages/index/index",
+    "pages/my/index",
     "pages/authorize/index",
     "pages/goods-details/index",
     "pages/shop-cart/index",
@@ -12,7 +13,6 @@
     "pages/order-list/index",
     "pages/order-details/index",
     "pages/wuliu/index",
-    "pages/mycoupons/index",
     "pages/notice/show",
     "pages/recharge/index",
     "pages/withdraw/index",
