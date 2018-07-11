@@ -8,7 +8,6 @@ Page({
     score_sign_continuous: 0
   },
   onLoad() {
-
   },
   onShow() {
     let that = this;
@@ -28,7 +27,7 @@ Page({
     this.checkScoreSign();
   },
 
-  getPhoneNumber: function(e) {
+  getPhoneNumber: function (e) {
     if (!e.detail.errMsg || e.detail.errMsg != "getPhoneNumber:ok") {
       wx.showModal({
         title: '提示',
@@ -45,7 +44,7 @@ Page({
         encryptedData: e.detail.encryptedData,
         iv: e.detail.iv
       },
-      success: function(res) {
+      success: function (res) {
         if (res.data.code == 0) {
           wx.showToast({
             title: '绑定成功',
@@ -63,14 +62,14 @@ Page({
       }
     })
   },
-  getUserApiInfo: function() {
+  getUserApiInfo: function () {
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/user/detail',
       data: {
         token: wx.getStorageSync('token')
       },
-      success: function(res) {
+      success: function (res) {
         if (res.data.code == 0) {
           that.setData({
             apiUserInfoMap: res.data.data,
@@ -81,14 +80,14 @@ Page({
     })
 
   },
-  getUserAmount: function() {
+  getUserAmount: function () {
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/user/amount',
       data: {
         token: wx.getStorageSync('token')
       },
-      success: function(res) {
+      success: function (res) {
         if (res.data.code == 0) {
           that.setData({
             balance: res.data.data.balance,
@@ -100,14 +99,14 @@ Page({
     })
 
   },
-  checkScoreSign: function() {
+  checkScoreSign: function () {
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/score/today-signed',
       data: {
         token: wx.getStorageSync('token')
       },
-      success: function(res) {
+      success: function (res) {
         if (res.data.code == 0) {
           that.setData({
             score_sign_continuous: res.data.data.continuous
@@ -116,14 +115,14 @@ Page({
       }
     })
   },
-  scoresign: function() {
+  scoresign: function () {
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/score/sign',
       data: {
         token: wx.getStorageSync('token')
       },
-      success: function(res) {
+      success: function (res) {
         if (res.data.code == 0) {
           that.getUserAmount();
           that.checkScoreSign();
@@ -137,17 +136,17 @@ Page({
       }
     })
   },
-  relogin: function() {
+  relogin: function () {
     wx.navigateTo({
       url: "/pages/authorize/index"
     })
   },
-  recharge: function() {
+  recharge: function () {
     wx.navigateTo({
       url: "/pages/recharge/index"
     })
   },
-  withdraw: function() {
+  withdraw: function () {
     wx.navigateTo({
       url: "/pages/withdraw/index"
     })

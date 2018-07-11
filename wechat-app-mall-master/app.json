@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/start/start",
+    "pages/my/index",
     "pages/mycoupons/index",
     "pages/index/index",
-    "pages/my/index",
     "pages/authorize/index",
     "pages/goods-details/index",
     "pages/shop-cart/index",
