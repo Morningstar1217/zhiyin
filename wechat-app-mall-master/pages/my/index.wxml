@@ -49,7 +49,7 @@
       <image src="/images/icons/coupons.png" />
       <text>优惠券</text>
     </navigator>
-    <navigator class="my-item" url="/pages/mycoupons/index" hover-class="navigator-hover">
+    <navigator class="my-item" url="/pages/signIn/signIn" hover-class="navigator-hover">
       <image src="/images/icons/Signin.png" />
       <text>签到</text>
     </navigator>

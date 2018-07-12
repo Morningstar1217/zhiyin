@@ -18,7 +18,8 @@
     "pages/withdraw/index",
     "pages/kanjia/index",
     "pages/fav/fav",
-    "pages/goods/goods"
+    "pages/goods/goods",
+    "pages/signIn/signIn"
   ],
   "window": {
     "backgroundTextStyle": "light",
