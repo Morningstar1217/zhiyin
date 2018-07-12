@@ -17,18 +17,22 @@
     <view class="my-item" hover-class="navigator-hover" data-id="0" bindtap="mygoorderlist">
       <image src="/images/icons/pay.png" />
       <text>待付款</text>
+      <view class="num" wx:if="{{payNum!==0}}">{{payNum}}</view>
     </view>
     <view class="my-item" hover-class="navigator-hover" data-id="1" bindtap="mygoorderlist">
       <image src="/images/icons/fahuo.png" />
       <text>待发货</text>
+      <view class="num" wx:if="{{fahuoNum!==0}}">{{fahuoNum}}</view>
     </view>
     <view class="my-item" hover-class="navigator-hover" data-id="2" bindtap="mygoorderlist">
       <image src="/images/icons/shouhuo.png" />
       <text>待收货</text>
+      <view class="num" wx:if="{{shouhuoNum!==0}}">{{shouhuoNum}}</view>
     </view>
     <view class="my-item" hover-class="navigator-hover" data-id="3" bindtap="mygoorderlist">
       <image src="/images/icons/pingjia.png" />
       <text>待评价</text>
+      <view class="num" wx:if="{{pingjiaNum!==0}}">{{pingjiaNum}}</view>
     </view>
   </view>
   <!-- 其他选项 -->

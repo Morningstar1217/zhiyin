@@ -5,20 +5,23 @@ Page({
     balance: 0,
     freeze: 0,
     score: 0,
-    score_sign_continuous: 0
+    score_sign_continuous: 0,
+    payNum: 0,
+    fahuoNum: 0,
+    shouhuoNum: 0,
+    pingjiaNum: 0
   },
   onLoad() {
-    wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/list',
-      data: {
-        token: wx.getStorageSync('token')
-      },
-      success: (res) => {
-        console.log(res)
-      }
-    })
+
   },
   onShow() {
+
+    this.setData({
+      payNum: 0,
+      fahuoNum: 0,
+      shouhuoNum: 0,
+      pingjiaNum: 0
+    })
     let that = this;
     let userInfo = wx.getStorageSync('userInfo')
     if (!userInfo) {
@@ -34,6 +37,39 @@ Page({
     this.getUserApiInfo();
     this.getUserAmount();
     this.checkScoreSign();
+
+    wx.request({
+      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/list',
+      data: {
+        token: wx.getStorageSync('token')
+      },
+      success: (res) => {
+        const that = this
+        console.log(res.data)
+        if (res.data.code === 0) {
+          const arr = res.data.data.orderList
+          for (var i in arr) {
+            if (arr[i].statusStr === "待支付") {
+              that.setData({
+                payNum: that.data.payNum + 1
+              })
+            } else if (arr[i].statusStr === "待发货") {
+              that.setData({
+                fahuoNum: that.data.fahuoNum + 1
+              })
+            } else if (arr[i].statusStr === "已发货待确认") {
+              that.setData({
+                shouhuoNum: that.data.shouhuoNum + 1
+              })
+            } else if (arr[i].statusStr === "待评价") {
+              that.setData({
+                pingjiaNum: that.data.pingjiaNum + 1
+              })
+            }
+          }
+        }
+      }
+    })
   },
 
   getPhoneNumber: function (e) {

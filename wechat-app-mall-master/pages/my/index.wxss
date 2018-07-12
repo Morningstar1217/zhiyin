@@ -5,7 +5,7 @@
 }
 
 .userinfo {
-  color: #333;
+  color: #555;
   display: flex;
   flex-direction: row;
   padding: 60rpx 0;
@@ -34,7 +34,7 @@
 
 .userinfo-nickname {
   margin-top: 20rpx;
-  color: #333;
+  color: #555;
   text-align: center;
   font-size: 36rpx;
 }
@@ -67,6 +67,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .signIn {
@@ -116,4 +117,18 @@
   vertical-align: middle;
   margin-bottom: 12rpx;
   margin-right: 6rpx;
+}
+
+.num {
+  position: absolute;
+  top: 30rpx;
+  right: 50rpx;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  background: #e64340;
+  font-size: 20rpx;
+  border-radius: 50%;
+  color: #fff;
 }

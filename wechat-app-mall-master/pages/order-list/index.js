@@ -99,10 +99,7 @@ Page({
     })
   },
   onLoad: function (options) {
-    // 生命周期函数--监听页面加载
-    this.setData({
-      currentType: app.orderListId
-    })
+
   },
   onReady: function () {
     // 生命周期函数--监听页面初次渲染完成
@@ -153,6 +150,13 @@ Page({
     })
   },
   onShow: function (options) {
+    // 生命周期函数--监听页面加载
+    if (app.orderListId) {
+      this.setData({
+        currentType: app.orderListId
+      })
+      app.orderListId = 0
+    }
     // 获取订单列表
     wx.showLoading();
     var that = this;
@@ -165,7 +169,6 @@ Page({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/list',
       data: postData,
       success: (res) => {
-        console.log(res)
         wx.hideLoading();
         if (res.data.code == 0) {
           that.setData({

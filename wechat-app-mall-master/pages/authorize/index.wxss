@@ -118,7 +118,7 @@ picker {
 }
 
 .save-btn {
-    background-color: #e64340;
+    background-color: #69C3AA;
     color: #fff;
     width: 80%;
     margin-top: 40px;
