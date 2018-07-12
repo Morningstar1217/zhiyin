@@ -45,7 +45,6 @@ Page({
       },
       success: (res) => {
         const that = this
-        console.log(res.data)
         if (res.data.code === 0) {
           const arr = res.data.data.orderList
           for (var i in arr) {

@@ -132,3 +132,11 @@
   border-radius: 50%;
   color: #fff;
 }
+
+.copyright{
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  color: #666;
+  width: 100%;
+  text-align: center;
+}

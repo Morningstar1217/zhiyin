@@ -60,4 +60,6 @@
       已签到{{score_sign_continuous}}天
     </button>
   </view> -->
+  <!-- 版权信息 -->
+  <view class="copyright">星元科技 V1.0</view>
 </view>
