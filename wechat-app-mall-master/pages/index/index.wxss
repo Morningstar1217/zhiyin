@@ -86,6 +86,7 @@ swiper-item image {
 }
 
 .goods-box {
+  position: relative;
   width: 339rpx;
   height: 472rpx;
   background-color: #fff;
@@ -189,31 +190,41 @@ swiper-item image {
 .coupons {
   margin: 10rpx 0;
   width: 100%;
-  height: 180rpx;
+  height: 160rpx;
   overflow: hidden;
 }
 
 .coupons-scroll {
   white-space: nowrap;
-  height: 180rpx;
+  height: 160rpx;
   width: 100%;
   background-color: #fff;
 }
 
 .coupons-item {
   width: 300rpx;
-  /* height: 180rpx; */
   margin: 10rpx;
-  padding-top: 20rpx;
-  padding-left: 15rpx;
+  padding: 20rpx 0 20rpx 15rpx;
   box-sizing: content-box;
   font-size: 20rpx;
   line-height: 35rpx;
   overflow: hidden;
   color: #fff;
   display: inline-block;
+  flex-direction: row;
+  justify-content: space-between;
   border-radius: 10px;
-  background: linear-gradient(to left, #f8cc8a, #f1a83b);
+  background: linear-gradient(to right, #69C3AA, rgb(121, 235, 202));
+}
+
+.coupons-left,
+.coupons-right {
+  float: left;
+}
+
+.coupons-right {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
 }
 
 .search-view {
@@ -258,7 +269,7 @@ swiper-item image {
   width: 150rpx;
   height: 70rpx;
   margin-right: 0rpx;
-  background-color: #f1a83b;
+  background-color: #69C3AA;
   font-size: 28rpx;
   align-items: center;
   border-top-left-radius: 0rpx;
@@ -280,4 +291,18 @@ swiper-item image {
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: 154rpx;
+}
+
+.recommendStatus {
+  position: absolute;
+  width: 200rpx;
+  height: 40rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background: #69C3AA;
+  top: 0;
+  left: 0;
+  transform: rotateX(45dge);
 }

@@ -6,7 +6,7 @@
         <view>满 {{item.moneyHreshold}} 元使用</view>
         <view>{{item.dateEnd}} 到期</view>
       </view>
-      <view style="font-size: 68rpx" class="coupons-right">￥ {{item.money}}元</view>
+      <view class="coupons-right">￥ {{item.money}}元</view>
     </view>
   </view>
   <view style="height:100rpx;background-color:#fff;width:100%;"></view>

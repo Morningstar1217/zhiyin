@@ -39,7 +39,7 @@
     line-height: 50rpx;
     border-radius: 20px;
     color: #fff;
-    background: linear-gradient(to left, #f3b85f, #f1a83b);
+    background: linear-gradient(to right, #69C3AA, rgb(121, 235, 202));
 }
 
 .coupons-left {
@@ -49,5 +49,10 @@
 }
 
 .coupons-right {
+    padding-left: 10rpx;
     align-self: center;
+    font-size: 68rpx;
+    height: 200rpx;
+    line-height: 200rpx;
+    border-left: 1px #eee dashed;
 }
