@@ -10,11 +10,11 @@
 <!-- 商品分类 -->
 <view class="type-container">
     <scroll-view class="type-navbar" scroll-x="true">
-    <view class="type-box" wx:for-items="{{categories}}" wx:key="id">
-        <view id="{{item.id}}" class="type-navbar-item {{activeCategoryId == item.id ? 'type-item-on' : ''}}" bindtap="tabClick">
-            {{item.name}}
+        <view class="type-box" wx:for-items="{{categories}}" wx:key="id">
+            <view id="{{item.id}}" class="type-navbar-item {{activeCategoryId == item.id ? 'type-item-on' : ''}}" bindtap="tabClick">
+                {{item.name}}
+            </view>
         </view>
-    </view>
     </scroll-view>
 </view>
 <view class="container">
@@ -32,4 +32,5 @@
             </view>
         </view>
     </view>
+    <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-goods">没有更多啦</view>
 </view>
