@@ -7,11 +7,32 @@
     </view>
     <view>积分 {{score}}</view>
   </view>
+  <!-- 订单标题 -->
+  <view class="my-order" bindtap="mygoorderlist" hover-class="navigator-hover" data-id="0">
+    <image src="/images/nav/order-off.png" />
+    <text>我的订单</text>
+  </view>
+  <!-- 订单列表 -->
   <view class="item-container">
-    <navigator class="my-item" url="/pages/order-list/index" hover-class="navigator-hover">
-      <image src="/images/icons/order.png" />
-      <text>订单</text>
-    </navigator>
+    <view class="my-item" hover-class="navigator-hover" data-id="0" bindtap="mygoorderlist">
+      <image src="/images/icons/pay.png" />
+      <text>待付款</text>
+    </view>
+    <view class="my-item" hover-class="navigator-hover" data-id="1" bindtap="mygoorderlist">
+      <image src="/images/icons/fahuo.png" />
+      <text>待发货</text>
+    </view>
+    <view class="my-item" hover-class="navigator-hover" data-id="2" bindtap="mygoorderlist">
+      <image src="/images/icons/shouhuo.png" />
+      <text>待收货</text>
+    </view>
+    <view class="my-item" hover-class="navigator-hover" data-id="3" bindtap="mygoorderlist">
+      <image src="/images/icons/pingjia.png" />
+      <text>待评价</text>
+    </view>
+  </view>
+  <!-- 其他选项 -->
+  <view class="item-container">
     <navigator class="my-item" url="/pages/fav/fav" hover-class="navigator-hover">
       <image src="/images/icons/fav.png" />
       <text>收藏</text>
@@ -24,19 +45,15 @@
       <image src="/images/icons/coupons.png" />
       <text>优惠券</text>
     </navigator>
-    <!-- <view wx:if="{{!userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
-      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号码</button>
-    </view> -->
-    <!-- <view wx:if="{{userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
-      {{userMobile}}
-    </view> -->
+    <navigator class="my-item" url="/pages/mycoupons/index" hover-class="navigator-hover">
+      <image src="/images/icons/Signin.png" />
+      <text>签到</text>
+    </navigator>
   </view>
-  <!-- <view class="my-item" style="border:none;padding:0rpx;margin:0rpx;background:none;border:none;height:auto;line-height:auto;">
-    <button type="warn" bindtap="relogin">重新授权登录</button>
-    <view style="height:20rpx;background: #eee;width:100%;"></view>
-  </view> -->
-  <view class="signIn">
+  <!-- <view class="signIn">
     <button wx:if="{{score_sign_continuous == 0}}" bindtap="scoresign">签到</button>
-    <button wx:if="{{score_sign_continuous > 0}}" disabled='true'>已签到{{score_sign_continuous}}天</button>
-  </view>
+    <button wx:if="{{score_sign_continuous > 0}}" disabled='true'>
+      已签到{{score_sign_continuous}}天
+    </button>
+  </view> -->
 </view>

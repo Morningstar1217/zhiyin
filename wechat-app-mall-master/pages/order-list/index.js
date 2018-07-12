@@ -1,32 +1,33 @@
 var wxpay = require('../../utils/pay.js')
 var app = getApp()
 Page({
-  data:{
+  data: {
     statusType: ["待付款", "待发货", "待收货", "待评价", "已完成"],
-    currentType:0,
+    currentType: 0,
     tabClass: ["", "", "", "", ""]
   },
-  statusTap:function(e){
-     var curType =  e.currentTarget.dataset.index;
-     this.data.currentType = curType
-     this.setData({
-       currentType:curType
-     });
-     this.onShow();
+  statusTap: function (e) {
+    var curType = e.currentTarget.dataset.index;
+    this.data.currentType = curType
+    console.log(curType)
+    this.setData({
+      currentType: curType
+    });
+    this.onShow();
   },
-  orderDetail : function (e) {
+  orderDetail: function (e) {
     var orderId = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: "/pages/order-details/index?id=" + orderId
     })
   },
-  cancelOrderTap:function(e){
+  cancelOrderTap: function (e) {
     var that = this;
     var orderId = e.currentTarget.dataset.id;
-     wx.showModal({
+    wx.showModal({
       title: '确定要取消该订单吗？',
       content: '',
-      success: function(res) {
+      success: function (res) {
         if (res.confirm) {
           wx.showLoading();
           wx.request({
@@ -46,7 +47,7 @@ Page({
       }
     })
   },
-  toPayTap:function(e){
+  toPayTap: function (e) {
     var that = this;
     var orderId = e.currentTarget.dataset.id;
     var money = e.currentTarget.dataset.money;
@@ -72,7 +73,7 @@ Page({
             // 直接使用余额支付
             wx.request({
               url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/pay',
-              method:'POST',
+              method: 'POST',
               header: {
                 'content-type': 'application/x-www-form-urlencoded'
               },
@@ -95,21 +96,25 @@ Page({
           })
         }
       }
-    })    
+    })
   },
-  onLoad:function(options){
+  onLoad: function (options) {
     // 生命周期函数--监听页面加载
-   
+    this.setData({
+      currentType: app.orderListId
+    })
   },
-  onReady:function(){
+  onReady: function () {
     // 生命周期函数--监听页面初次渲染完成
- 
+
   },
-  getOrderStatistics : function () {
+  getOrderStatistics: function () {
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/statistics',
-      data: { token: wx.getStorageSync('token') },
+      data: {
+        token: wx.getStorageSync('token')
+      },
       success: (res) => {
         wx.hideLoading();
         if (res.data.code == 0) {
@@ -147,7 +152,7 @@ Page({
       }
     })
   },
-  onShow:function(){
+  onShow: function (options) {
     // 获取订单列表
     wx.showLoading();
     var that = this;
@@ -160,12 +165,13 @@ Page({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/list',
       data: postData,
       success: (res) => {
+        console.log(res)
         wx.hideLoading();
         if (res.data.code == 0) {
           that.setData({
             orderList: res.data.data.orderList,
-            logisticsMap : res.data.data.logisticsMap,
-            goodsMap : res.data.data.goodsMap
+            logisticsMap: res.data.data.logisticsMap,
+            goodsMap: res.data.data.goodsMap
           });
         } else {
           this.setData({
@@ -176,22 +182,22 @@ Page({
         }
       }
     })
-    
+
   },
-  onHide:function(){
+  onHide: function () {
     // 生命周期函数--监听页面隐藏
- 
+
   },
-  onUnload:function(){
+  onUnload: function () {
     // 生命周期函数--监听页面卸载
- 
+
   },
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
     // 页面相关事件处理函数--监听用户下拉动作
-   
+
   },
-  onReachBottom: function() {
+  onReachBottom: function () {
     // 页面上拉触底事件的处理函数
-  
+
   }
 })

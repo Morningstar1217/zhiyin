@@ -8,6 +8,15 @@ Page({
     score_sign_continuous: 0
   },
   onLoad() {
+    wx.request({
+      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/list',
+      data: {
+        token: wx.getStorageSync('token')
+      },
+      success: (res) => {
+        console.log(res)
+      }
+    })
   },
   onShow() {
     let that = this;
@@ -150,5 +159,11 @@ Page({
     wx.navigateTo({
       url: "/pages/withdraw/index"
     })
+  },
+  mygoorderlist: function (e) {
+    wx.navigateTo({
+      url: "/pages/order-list/index"
+    });
+    app.orderListId = e.currentTarget.dataset.id;
   }
 })

@@ -8,12 +8,12 @@
   color: #333;
   display: flex;
   flex-direction: row;
-  padding: 80rpx 0;
+  padding: 60rpx 0;
   align-items: center;
-  background-image: url("http://pbn1t9k4c.bkt.clouddn.com/bg2.png");
+  background-image: url("http://pbn1t9k4c.bkt.clouddn.com/bg5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* background: #69C3AA; */
+  /* background-color: #69C3AA; */
   width: 750rpx;
   justify-content: space-around;
   font-size: 32rpx;
@@ -49,13 +49,14 @@
 }
 
 .item-container {
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-direction: row;
   font-size: 28rpx;
   flex-wrap: wrap;
   color: #666;
   margin-top: 20rpx;
+  border-bottom: 1px solid #eee;
 }
 
 .my-item {
@@ -72,7 +73,7 @@
   margin-top: 40rpx;
 }
 
-.signIn button{
+.signIn button {
   width: 240rpx;
 }
 
@@ -97,4 +98,22 @@
   height: 80rpx;
   line-height: 80rpx;
   padding-left: 100rpx;
+}
+
+.my-order {
+  width: 98%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  text-indent: 1.5em;
+}
+
+.my-order image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-bottom: 12rpx;
+  margin-right: 6rpx;
 }

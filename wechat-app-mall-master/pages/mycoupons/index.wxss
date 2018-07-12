@@ -51,8 +51,10 @@
 .coupons-right {
     padding-left: 10rpx;
     align-self: center;
-    font-size: 68rpx;
+    font-size: 50rpx;
     height: 200rpx;
     line-height: 200rpx;
     border-left: 1px #eee dashed;
+    width: 200rpx;
+    text-align: center;
 }
