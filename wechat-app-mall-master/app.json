@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/my/index",
     "pages/start/start",
+    "pages/my/index",
     "pages/authorize/index",
     "pages/index/index",
     "pages/mycoupons/index",
