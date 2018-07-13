@@ -1,1 +1,62 @@
 /* pages/signIn/signIn.wxss */
+
+.signIn {
+    margin-top: 40rpx;
+    width: 95%;
+    padding: 40rpx 0;
+    border-bottom: 1px solid #eee;
+}
+
+.signIn button {
+    width: 300rpx;
+    height: 300rpx;
+    line-height: 300rpx;
+    border-radius: 50%;
+    font-size: 50rpx;
+    color: #fff;
+    outline: none;
+    /* background: radial-gradient(circle, #fff, #69C3AA); */
+    /* background-image: url("http://pbn1t9k4c.bkt.clouddn.com/buttonBg.png"); */
+    background-size: cover;
+    background: #69C3AA;
+}
+
+button[disabled]:not([type]) {
+    background: rgb(137, 211, 190);
+    color: #fff;
+}
+
+.dayWrap {
+    margin-top: 40rpx;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.day {
+    width: 15%;
+    height: 100rpx;
+    text-align: center;
+    position: relative;
+}
+
+.dayNum {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.dayColor {
+    width: 80%;
+    margin:  0 auto;
+    height: 2rpx;
+    background: #69C3AA;
+}
+
+.signEd {
+    width: 50%;
+    height: 40rpx;
+    margin:  0 auto;
+    background-image: url('http://pbn1t9k4c.bkt.clouddn.com/sure.png');
+    background-size: cover;
+}

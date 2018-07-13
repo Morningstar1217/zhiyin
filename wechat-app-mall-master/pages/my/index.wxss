@@ -70,14 +70,6 @@
   position: relative;
 }
 
-.signIn {
-  margin-top: 40rpx;
-}
-
-.signIn button {
-  width: 240rpx;
-}
-
 .navigator-hover {
   background: #fff;
 }

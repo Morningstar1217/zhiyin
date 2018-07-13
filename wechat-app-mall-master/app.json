@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/mycoupons/index",
     "pages/start/start",
+    "pages/signIn/signIn",
     "pages/my/index",
     "pages/authorize/index",
     "pages/index/index",
-    "pages/mycoupons/index",
     "pages/goods-details/index",
     "pages/shop-cart/index",
     "pages/to-pay-order/index",
@@ -18,8 +19,7 @@
     "pages/withdraw/index",
     "pages/kanjia/index",
     "pages/fav/fav",
-    "pages/goods/goods",
-    "pages/signIn/signIn"
+    "pages/goods/goods"
   ],
   "window": {
     "backgroundTextStyle": "light",

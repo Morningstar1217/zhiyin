@@ -1,2 +1,52 @@
-<!--pages/signIn/signIn.wxml-->
-
+<!-- pages/signIn/signIn.wxml -->
+<view class="container">
+    <view class="signIn">
+        <button wx:if="{{score_sign_continuous == 0}}" bindtap="scoresign">签到</button>
+        <button wx:if="{{score_sign_continuous > 0}}" disabled='true'>
+            已签到
+        </button>
+    </view>
+    <!-- 签到天数 -->
+    <view class="dayWrap">
+        <view class="day">
+            <text class="dayNum">1天</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>=1}}"></view>
+        </view>
+        <view class="day">
+            <text class="dayNum">2天</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>=2}}"></view>
+        </view>
+        <view class="day">
+            <text class="dayNum">3天</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>=3}}"></view>
+        </view>
+        <view class="day">
+            <text class="dayNum">4天</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>=4}}"></view>
+        </view>
+        <view class="day">
+            <text class="dayNum">5天</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>=5}}"></view>
+        </view>
+        <view class="day">
+            <text class="dayNum">6天</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>=6}}"></view>
+        </view>
+        <view class="day">
+            <text class="dayNum">7天</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>=7}}"></view>
+        </view>
+        <view class="day">
+            <text class="dayNum">7天+</text>
+            <view class="dayColor"></view>
+            <view class="signEd" wx:if="{{score_sign_continuous>7}}"></view>
+        </view>
+    </view>
+</view>
