@@ -1,6 +1,3 @@
-.container {
-    background-color: #F2f2f2;
-}
 
 .coupons-list {
     width: 100%;
@@ -57,4 +54,23 @@
     border-left: 1px #eee dashed;
     width: 200rpx;
     text-align: center;
+}
+
+.couponsEmpty{
+    width: 50%;
+    height: 270rpx;
+    text-align: center;
+
+}
+
+.couponsEmpty image{
+    width: 400rpx;
+    height: 200rpx;
+    margin-left: -10rpx;
+}
+
+.couponsEmpty text{
+    font-size: 28rpx;
+    margin-top: -20rpx;
+    color: #333;
 }
