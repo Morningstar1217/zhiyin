@@ -60,7 +60,7 @@ page{
 }
 .title{
   position: absolute;
-  top: 30rpx;
+  top: 150rpx;
   left: 50%;
   width: 600rpx;
   height: 200rpx;
@@ -87,7 +87,7 @@ page{
 
 .hd {
   position: absolute;
-  top: 0;
+  top: 100rpx;
   left: 50%;
   width: 1000rpx;
   margin-left: -500rpx;
@@ -146,6 +146,7 @@ page{
   align-items: stretch;
   animation: bd-rise 2s cubic-bezier(0.23,1,0.32,1) .75s forwards;
   opacity: 0;
+  top: 100rpx;
 }
 @keyframes bd-rise{
   from {opacity: 0; transform: translate3d(0,60rpx,0); }

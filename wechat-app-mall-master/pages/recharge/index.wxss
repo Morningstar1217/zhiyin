@@ -4,6 +4,7 @@ page{
 .container{
     background-color: #f5f5f9;
     justify-content: initial;
+    margin-top:120rpx;
 }
 .form-box{
     width:100%;

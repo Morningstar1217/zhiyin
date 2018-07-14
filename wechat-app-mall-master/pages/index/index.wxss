@@ -12,14 +12,14 @@
 
 .swiper_box {
   width: 100%;
-  height: 450rpx;
+  height: 700rpx;
 }
 
 swiper-item image {
   width: 100%;
   display: inline-block;
   overflow: hidden;
-  height: 450rpx;
+  height: 700rpx;
 }
 
 .swiper-container .dots {
@@ -227,6 +227,8 @@ swiper-item image {
   margin-left: 30rpx;
 }
 
+/* 搜索栏 */
+
 .search-view {
   /* position:fixed; */
   left: 0;
@@ -234,35 +236,47 @@ swiper-item image {
   top: 0;
   z-index: 500;
   width: 100%;
-  height: 100rpx;
-  background: #f2f2f2;
+  height: 120rpx;
+  /* background: #f2f2f2; */
   display: flex;
   flex-direction: column;
 }
 
 .search-content {
+  position: relative;
   background: white;
-  width: 700rpx;
+  width: 500rpx;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: auto;
+  /* padding-top: auto;
   padding-left: 20rpx;
-  padding-bottom: auto;
-  margin: auto;
+  padding-bottom: auto; */
+  /* margin: auto; */
   height: 70rpx;
   border-radius: 5px 5px;
+  margin-top: 58rpx;
+  margin-left: 30rpx;
 }
 
 .search-icon {
+  position: absolute;
   width: 40rpx;
   height: 40rpx;
   margin-right: 20rpx;
+  left: 12rpx;
 }
 
 .search-input {
   width: 500rpx;
   font-size: 28rpx;
+  background-color: #eee;
+  height: 60rpx;
+  /* text-indent: .5em; */
+  border-radius: 40rpx;
+  padding-left: 2em;
+  /* text-indent: 2em; */
+  color: #333;
 }
 
 .search-btn {
@@ -278,6 +292,8 @@ swiper-item image {
   border: none;
   position: relative;
 }
+
+/* 推荐栏 */
 
 .goodsTitle {
   text-align: center;

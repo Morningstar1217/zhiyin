@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/mycoupons/index",
     "pages/start/start",
-    "pages/signIn/signIn",
     "pages/my/index",
-    "pages/authorize/index",
-    "pages/index/index",
-    "pages/goods-details/index",
     "pages/shop-cart/index",
+    "pages/index/index",
+    "pages/goods/goods",
+    "pages/goods-details/index",
+    "pages/mycoupons/index",
+    "pages/signIn/signIn",
+    "pages/authorize/index",
     "pages/to-pay-order/index",
     "pages/select-address/index",
     "pages/address-add/index",
@@ -18,14 +19,14 @@
     "pages/recharge/index",
     "pages/withdraw/index",
     "pages/kanjia/index",
-    "pages/fav/fav",
-    "pages/goods/goods"
+    "pages/fav/fav"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#6e6d6b",

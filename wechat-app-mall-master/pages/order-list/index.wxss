@@ -1,6 +1,7 @@
 .container{
     width: 100%;
     background-color: #F2f2f2;
+    margin-top: 100rpx;
 }
 .status-box{
     width:100%;
@@ -37,7 +38,7 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    top: 88rpx;
+    top: 188rpx;
     left: 0;
     right: 0;
     text-align: center;

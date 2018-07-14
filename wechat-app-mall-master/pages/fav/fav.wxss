@@ -1,7 +1,15 @@
 /* pages/fav/fav.wxss */
 
 @import '/pages/index/index.wxss';
+.container {
+    margin-top: 120rpx;
+}
+
 .goods-box {
     height: auto;
     padding-bottom: 10px;
+}
+
+.goodsTitle{
+    background-image: url("http://pbn1t9k4c.bkt.clouddn.com/fav3.png");
 }

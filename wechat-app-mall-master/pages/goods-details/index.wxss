@@ -3,6 +3,21 @@
   background-color: #F2f2f2;
   min-height: 100%;
   padding-bottom: 100rpx;
+  position: relative;
+}
+
+.return {
+  position: fixed;
+  width: 60rpx;
+  height: 60rpx;
+  top: 55rpx;
+  left: 20rpx;
+  border-radius: 50%;
+  background-image: url("http://pbn1t9k4c.bkt.clouddn.com/return.png");
+  background-repeat: no-repeat;
+  background-size: 76%;
+  background-position: 44%;
+  z-index: 999;
 }
 
 .swiper-container {

@@ -2,11 +2,12 @@
 @import "../template-cart/template-cart.wxss";
 page{
   min-height: 100%;
-  background-color: #F2f2f2;
+  /* background-color: #F2f2f2; */
 }
 .container {
-  background-color: #F2f2f2;
+  /* background-color: #F2f2f2; */
   min-height: 100%;
+  margin-top: 100rpx;
 }
 .pos-fiexd{
   position: fixed;

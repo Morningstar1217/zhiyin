@@ -1,5 +1,9 @@
 /* pages/signIn/signIn.wxss */
 
+.container {
+    margin-top: 120rpx;
+}
+
 .signIn {
     margin-top: 40rpx;
     width: 95%;
@@ -48,7 +52,7 @@ button[disabled]:not([type]) {
 
 .dayColor {
     width: 80%;
-    margin:  0 auto;
+    margin: 0 auto;
     height: 2rpx;
     background: #69C3AA;
 }
@@ -56,7 +60,7 @@ button[disabled]:not([type]) {
 .signEd {
     width: 50%;
     height: 40rpx;
-    margin:  0 auto;
+    margin: 0 auto;
     background-image: url('http://pbn1t9k4c.bkt.clouddn.com/sure.png');
     background-size: cover;
 }
