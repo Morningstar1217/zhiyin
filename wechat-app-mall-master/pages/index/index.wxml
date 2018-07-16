@@ -43,8 +43,8 @@
       </view>
     </scroll-view>
   </view>
-  <view class="goodsTitle">商品推荐</view>
-  <!-- 商品列表 -->
+  <view class="goodsTitle">人气推荐</view>
+  <!-- 推荐商品列表 -->
   <view class="goods-container">
     <view class="goods-box" wx:for-items="{{recommendStatusGoods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
       <view class="img-box">

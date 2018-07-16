@@ -36,7 +36,7 @@
     </view>
   </view>
   <!-- 其他选项 -->
-  <view class="item-container">
+  <view class="item-container item-container2">
     <navigator class="my-item" url="/pages/fav/fav" hover-class="navigator-hover">
       <image src="/images/icons/fav.png" />
       <text>收藏</text>

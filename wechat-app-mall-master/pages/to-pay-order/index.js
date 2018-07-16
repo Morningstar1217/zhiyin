@@ -50,7 +50,7 @@ Page({
     //显示收货地址标识
     that.setData({
       isNeedLogistics: 1,
-      orderType: e.orderType
+      // orderType: e.orderType
     });
   },
 
