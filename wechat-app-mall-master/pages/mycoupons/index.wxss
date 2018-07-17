@@ -6,6 +6,7 @@
     width: 100%;
     background-color: #fff;
     margin-top: 20rpx;
+    margin-bottom: 100rpx;
 }
 
 .bottom-box {

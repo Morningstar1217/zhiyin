@@ -251,7 +251,7 @@ Page({
     return {
       title: wx.getStorageSync('mallName') + '——' + app.globalData.shareProfile,
       path: '/pages/index/index',
-      imageUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530168261969&di=23134a93aa5a91d874dabbed2f4d2818&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F10%2F66%2F34%2F25bOOOPIC0c.jpg',
+      imageUrl: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531824017525&di=d4798643d1f6d09fe2fc9dbfd633d04e&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01c6d8577270370000012e7e30d877.jpg%401280w_1l_2o_100sh.jpg',
       success: function (res) {
         // 转发成功
       },

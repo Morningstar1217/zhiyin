@@ -1,3 +1,102 @@
-/* pages/coupons/index.wxss */
+/* 优惠券 */
 
-@import "../index/index.wxss"
+@import "../index/index.wxss";
+.container {
+    margin-top: 120rpx;
+    background: #fff;
+}
+
+.search-view {
+    height: auto;
+}
+
+.search-content {
+    width: 90%;
+    margin-left: 40rpx;
+    margin-top: 0;
+}
+
+.search-input {
+    width: 90%;
+}
+
+.inputCoupons {
+    width: 100%;
+    height: 180rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* 优惠券列表 */
+
+.coupons {
+    margin: 10rpx 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.inp {
+    width: 150rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border: 1px solid #eee;
+}
+
+.coupons-scroll {
+    white-space: nowrap;
+    width: 100%;
+    background-color: #fff;
+}
+
+.coupons-item {
+    width: 80%;
+    margin: 10rpx auto;
+    padding: 30rpx 0 30rpx 50rpx;
+    box-sizing: content-box;
+    font-size: 28rpx;
+    line-height: 35rpx;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 10px;
+    background: linear-gradient(to right, #69C3AA, rgb(121, 235, 202));
+}
+
+.coupons-left,
+.coupons-right {
+    float: left;
+}
+
+.coupons-left {
+    width: 55%;
+}
+
+.coupons-left>view {
+    height: 50rpx;
+    line-height: 50rpx;
+}
+
+.coupons-right {
+    width: 30%;
+    padding-left: 10%;
+    height: 160rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: dotted 1px #eee;
+}
+
+/* 帮助 */
+
+.couponsHelp {
+    width: 100%;
+    font-size: 28rpx;
+    color: #999;
+    text-indent: 2em;
+    margin-bottom: 30rpx;
+}
+
+.couponsHelp>text {
+    display: block;
+}

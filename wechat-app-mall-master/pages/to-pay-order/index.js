@@ -47,12 +47,10 @@ Page({
 
   onLoad: function (e) {
     //显示收货地址标识
-    if (!e) {
-      this.setData({
-        isNeedLogistics: 1,
-        orderType: e.orderType
-      });
-    }
+    this.setData({
+      isNeedLogistics: 1,
+      orderType: e.orderType
+    });
   },
 
   getDistrictId: function (obj, aaa) {
@@ -66,7 +64,9 @@ Page({
   },
 
   createOrder: function (e) {
-    wx.showLoading();
+    wx.showLoading({
+      "title":"loading..."
+    });
     var that = this;
     var loginToken = wx.getStorageSync('token') // 用户登录 token
     var remark = ""; // 备注信息

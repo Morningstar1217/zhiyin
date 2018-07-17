@@ -9,6 +9,7 @@ Page({
    */
   data: {
     coupons: [],
+    inputValue: ''
   },
 
   /**
@@ -26,10 +27,19 @@ Page({
         type: ''
       },
       success: function (res) {
+        console.log(res.data.data)
+
         if (res.data.code == 0) {
+          const arr = res.data.data
+          const arr2 = []
+          for (var i in arr) {
+            if (arr[i].type != 1) {
+              arr2.push(arr[i])
+            }
+          }
           that.setData({
             hasNoCoupons: false,
-            coupons: res.data.data
+            coupons: arr2
           });
         }
       }
@@ -44,55 +54,95 @@ Page({
         token: wx.getStorageSync('token')
       },
       success: function (res) {
-        if (res.data.code == 20001 || res.data.code == 20002) {
-          wx.showModal({
-            title: '温馨提示',
-            content: '来晚了',
-            showCancel: false
-          })
-          return;
-        }
-        if (res.data.code == 20003) {
-          wx.showModal({
-            title: '温馨提示',
-            content: '你领过了，别贪心哦~',
-            showCancel: false
-          })
-          return;
-        }
-        if (res.data.code == 30001) {
-          wx.showModal({
-            title: '温馨提示',
-            content: '您的积分不足',
-            showCancel: false
-          })
-          return;
-        }
-        if (res.data.code == 20004) {
-          wx.showModal({
-            title: '温馨提示',
-            content: '已过期~',
-            showCancel: false
-          })
-          return;
-        }
-        if (res.data.code == 0) {
-          wx.showModal({
-            title: '温馨提示',
-            content: '领取成功~',
-            showCancel: false
-          })
-        } else {
-          wx.showModal({
-            title: '温馨提示',
-            content: res.data.msg,
-            showCancel: false
-          })
-        }
+        that.resMsg(res.data.code)
       }
     })
   },
-
+  gitCoupon2: function () {
+    const that = this
+    if (!that.data.inputValue) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '请输入口令~',
+        showCancel: false
+      })
+      return
+    }
+    wx.request({
+      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/discounts/fetch',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      data: {
+        id: 2745,
+        pwd: that.data.inputValue,
+        token: wx.getStorageSync('token')
+      },
+      success: function (res) {
+        that.resMsg(res.data.code)
+      }
+    })
+  },
+  listenInput: function (e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+  resMsg: function (num) {
+    if (num == 20001 || num == 20002) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '来晚了',
+        showCancel: false
+      })
+      return;
+    }
+    if (num == 20000) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '口令错误~',
+        showCancel: false
+      })
+      return;
+    }
+    if (num == 20003) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '你领过了，别贪心哦~',
+        showCancel: false
+      })
+      return;
+    }
+    if (num == 30001) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '您的积分不足',
+        showCancel: false
+      })
+      return;
+    }
+    if (num == 20004) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '已过期~',
+        showCancel: false
+      })
+      return;
+    }
+    if (num == 0) {
+      wx.showModal({
+        title: '温馨提示',
+        content: '领取成功~',
+        showCancel: false
+      })
+    } else {
+      wx.showModal({
+        title: '温馨提示',
+        content: "领取失败~",
+        showCancel: false
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

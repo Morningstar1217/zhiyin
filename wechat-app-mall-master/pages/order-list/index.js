@@ -157,7 +157,9 @@ Page({
       app.orderListId = 0
     }
     // 获取订单列表
-    wx.showLoading();
+    wx.showLoading({
+      "title":"loading..."
+    });
     var that = this;
     var postData = {
       token: wx.getStorageSync('token')

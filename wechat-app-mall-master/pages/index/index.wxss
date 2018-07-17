@@ -189,48 +189,6 @@ swiper-item image {
   left: 0;
 }
 
-/* 优惠券 */
-
-.coupons {
-  margin: 10rpx 0;
-  width: 100%;
-  height: 160rpx;
-  overflow: hidden;
-}
-
-.coupons-scroll {
-  white-space: nowrap;
-  height: 160rpx;
-  width: 100%;
-  background-color: #fff;
-}
-
-.coupons-item {
-  width: 300rpx;
-  margin: 10rpx;
-  padding: 20rpx 0 20rpx 15rpx;
-  box-sizing: content-box;
-  font-size: 20rpx;
-  line-height: 35rpx;
-  overflow: hidden;
-  color: #fff;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 10px;
-  background: linear-gradient(to right, #69C3AA, rgb(121, 235, 202));
-}
-
-.coupons-left,
-.coupons-right {
-  float: left;
-}
-
-.coupons-right {
-  margin-top: 30rpx;
-  margin-left: 30rpx;
-}
-
 /* 搜索栏 */
 
 .search-view {
