@@ -65,7 +65,7 @@ page {
 }
 
 .item-container2 {
-  margin-top: 20rpx;
+  margin-top: 4rpx;
 }
 
 .my-item {

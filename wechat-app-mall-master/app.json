@@ -1,15 +1,15 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/authorize/index",
     "pages/start/start",
     "pages/my/index",
-    "pages/index/index",
     "pages/order-details/index",
     "pages/shop-cart/index",
     "pages/goods/goods",
     "pages/goods-details/index",
     "pages/mycoupons/index",
     "pages/signIn/signIn",
-    "pages/authorize/index",
     "pages/to-pay-order/index",
     "pages/select-address/index",
     "pages/address-add/index",
