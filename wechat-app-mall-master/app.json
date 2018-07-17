@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/coupons/index",
     "pages/index/index",
     "pages/authorize/index",
     "pages/start/start",

@@ -1,0 +1,3 @@
+/* pages/coupons/index.wxss */
+
+@import "../index/index.wxss"

@@ -20,6 +20,28 @@ Page({
     hasNoCoupons: true,
     coupons: [],
     searchInput: '',
+    menuData: [
+      {
+        url: '/pages/signIn/signIn',
+        text: '签到',
+        imgUrl: "/images/icons/Signin.png"
+      },
+      {
+        url: '/pages/coupons/index',
+        text: '礼券',
+        imgUrl: "/images/icons/coupons.png"
+      },
+      {
+        url: '/pages/signIn/signIn',
+        text: '砍价',
+        imgUrl: "/images/icons/bargain.png"
+      },
+      {
+        url: '/pages/signIn/signIn',
+        text: '专栏',
+        imgUrl: "/images/icons/column.png"
+      }
+    ]
   },
 
   tabClick: function (e) {
@@ -159,7 +181,6 @@ Page({
         type: ''
       },
       success: function (res) {
-        console.log(res)
         if (res.data.code == 0) {
           that.setData({
             hasNoCoupons: false,

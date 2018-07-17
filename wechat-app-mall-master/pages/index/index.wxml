@@ -29,21 +29,9 @@
   </view>
   <!-- 菜单列表 -->
   <view class="menu">
-    <navigator class="menuOp" url="/pages/signIn/signIn" hover-class="navigator-hover">
-      <image class="menuImg" src="/images/icons/Signin.png" />
-      签到
-    </navigator>
-    <navigator class="menuOp">
-      <image class="menuImg" src="/images/icons/coupons.png" />
-      礼券
-    </navigator>
-    <navigator class="menuOp">
-      <image class="menuImg" src="/images/icons/bargain.png" />
-      砍价
-    </navigator>
-    <navigator class="menuOp">
-      <image class="menuImg" src="/images/icons/column.png" />
-      专栏
+    <navigator wx:for="{{menuData}}" class="menuOp" url="{{item.url}}" hover-class="navigator-hover" wx:key="id">
+      <image class="menuImg" src="{{item.imgUrl}}" class="menuImg" />
+      {{item.text}}
     </navigator>
   </view>
   <!-- 优惠券 -->
