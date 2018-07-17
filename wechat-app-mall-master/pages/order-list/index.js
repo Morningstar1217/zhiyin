@@ -9,7 +9,6 @@ Page({
   statusTap: function (e) {
     var curType = e.currentTarget.dataset.index;
     this.data.currentType = curType
-    console.log(curType)
     this.setData({
       currentType: curType
     });
