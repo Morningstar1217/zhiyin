@@ -32,12 +32,12 @@ Page({
         imgUrl: "/images/icons/coupons.png"
       },
       {
-        url: '/pages/signIn/signIn',
+        url: '/pages/bargain/index',
         text: '砍价',
         imgUrl: "/images/icons/bargain.png"
       },
       {
-        url: '/pages/signIn/signIn',
+        url: '/pages/column/index',
         text: '专栏',
         imgUrl: "/images/icons/column.png"
       }

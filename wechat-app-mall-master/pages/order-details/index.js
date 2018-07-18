@@ -61,7 +61,9 @@ Page({
       content: '',
       success: function (res) {
         if (res.confirm) {
-          wx.showLoading();
+          wx.showLoading({
+            "title":'loading...'
+          });
           wx.request({
             url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/delivery',
             data: {
@@ -116,7 +118,9 @@ Page({
       i++;
     }
     postJsonString.reputations = reputations;
-    wx.showLoading();
+    wx.showLoading({
+      "title":'loading...'
+    });
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/reputation',
       data: {

@@ -20,7 +20,9 @@
     "pages/withdraw/index",
     "pages/kanjia/index",
     "pages/start/start",
-    "pages/fav/fav"
+    "pages/fav/fav",
+    "pages/bargain/index",
+    "pages/column/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

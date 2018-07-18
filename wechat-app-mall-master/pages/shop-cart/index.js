@@ -273,7 +273,9 @@ Page({
   },
   /* 去结算 */
   toPayOrder: function () {
-    wx.showLoading();
+    wx.showLoading({
+      "title":'loading...'
+    });
     var that = this;
     if (this.data.goodsList.noSelect) {
       wx.hideLoading();

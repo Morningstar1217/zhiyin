@@ -273,6 +273,8 @@ swiper-item image {
   margin-top: 4rpx;
 }
 
+/* 推荐斜条 */
+
 .recommendStatus {
   position: absolute;
   width: 200rpx;
@@ -281,7 +283,7 @@ swiper-item image {
   font-size: 24rpx;
   text-align: center;
   line-height: 40rpx;
-  background: #69C3AA;
+  background: #e4393c;
   top: 20rpx;
   left: -60rpx;
   transform: rotate(-45deg);
@@ -308,8 +310,8 @@ swiper-item image {
   justify-content: space-around;
   padding: 20rpx 0;
   align-items: center;
-  font-size: 28rpx;
-  color: #69C3AA;
+  font-size: 24rpx;
+  color: #999;
 }
 
 .menuImg {
