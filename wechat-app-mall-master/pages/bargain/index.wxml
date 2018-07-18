@@ -1,2 +1,4 @@
-<!--pages/bargain/index.wxml-->
-<text>pages/bargain/index.wxml</text>
+<!-- pages/bargain/index.wxml -->
+<view class="container" style="margin-top:120rpx">
+    <text>功能暂时还未开放~</text>
+</view>
