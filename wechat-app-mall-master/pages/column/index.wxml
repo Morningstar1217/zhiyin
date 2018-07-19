@@ -1,26 +1,25 @@
 <!-- pages/column/index.wxml -->
 <view class="container">
-    <!-- 公告 -->
-    <!-- <view wx:if="{{noticeList}}" class="notice">
-        <view class="notice_iteml">公告：</view>
-        <swiper wx:if="{{noticeList}}" class="notice_swiper" vertical="true" autoplay="true" circular="true" interval="3000">
-            <navigator wx:for-items="{{noticeList.dataList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}" open-type="navigate">
-                <swiper-item>
-                    <view class="notice_itemr">{{item.title}}</view>
-                </swiper-item>
-            </navigator>
-        </swiper>
-    </view> -->
+    <!-- 文章分类 -->
+    <view class="colTypeWrap">
+        <scroll-view scroll-x class="colTypeWrapSwiper">
+            <view class="colType" wx:for="{{columnType}}" wx:key="id" style="background-image:url('{{item.icon}}')" data-id="{{item.id}}" bind:tap="changeType">
+                <text>{{item.name}}</text>
+            </view>
+        </scroll-view>
+    </view>
     <!-- 专栏显示 -->
-    <view class="columnList" wx:if="{{noticeList}}">
-        <navigator class="columnWrap" wx:for-items="{{noticeList.dataList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}" open-type="navigate" hover-class="navigator-hover">
+    <view class="columnList" wx:if="{{colList}}">
+        <navigator class="columnWrap" wx:for="{{colList}}" wx:key="id" url="/pages/column-detail/index?id={{item.id}}" open-type="navigate" hover-class="navigator-hover">
             <view class="columnImg">
-                <image src="/images/banner02.jpg" mode="aspectFill" />
+                <image src="{{item.pic}}" mode="aspectFill" />
             </view>
             <view class="columnTitle">
                 <view class="title">{{item.title}}</view>
-                <view class="date">{{item.dateAdd}}</view>
+                <!-- <view class="date">{{item.dateAdd}}</view> -->
             </view>
         </navigator>
     </view>
+    <!-- 没有文章时的显示 -->
+    <view hidden="{{colList.length!=0?true:false}}" class="no-more-goods">没有更多啦</view>
 </view>

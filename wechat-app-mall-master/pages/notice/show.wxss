@@ -6,6 +6,10 @@
 }
 .title {
   color:chocolate;
-  font-size: 30rpx;
+  font-size: 38rpx;
   margin-bottom: 30rpx;
+}
+
+.author{
+  margin-bottom: 40rpx;
 }

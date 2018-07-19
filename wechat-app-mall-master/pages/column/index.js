@@ -7,32 +7,74 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    columnType: [],
+    colList: [],
+    // typeNum: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getNotice()
-  },
-  /* 获取公告 */
-  getNotice: function () {
-    var that = this;
+    this.getcolType()
+    const that = this
     wx.request({
-      url: 'https://api.it120.cc/' + app.globalData.subDomain + '/notice/list',
-      data: {
-        pageSize: 5
+      url: 'https://api.it120.cc/zdandan/cms/category/list',
+      header: {
+        'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res)
-        if (res.data.code == 0) {
+        if (res.data.code === 0) {
           that.setData({
-            noticeList: res.data.data
-          });
+            typeNum: res.data.data[0].id
+          })
+        }
+        that.getcolList(that.data.typeNum)
+      }
+    })
+
+  },
+  /* 获取文章分类 */
+  getcolType: function () {
+    var that = this;
+    wx.request({
+      url: 'https://api.it120.cc/zdandan/cms/category/list',
+      success: function (res) {
+        if (res.data.code === 0) {
+          that.setData({
+            columnType: res.data.data
+          })
         }
       }
     })
+  },
+  /* 获取文章 */
+  getcolList: function (num) {
+    const that = this
+    wx.request({
+      url: 'https://api.it120.cc/zdandan/cms/news/list',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      data: {
+        categoryId: num
+      },
+      success: function (res) {
+        if (res.data.code === 0) {
+          that.setData({
+            colList: res.data.data
+          })
+        } else if (res.data.code === 404) {
+          that.setData({
+            colList: []
+          })
+        }
+      }
+    })
+  },
+  /* 切换分类 */
+  changeType: function (options) {
+    this.getcolList(options.currentTarget.dataset.id)
   },
 
   /**

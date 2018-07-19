@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/column/index",
+    "pages/column-detail/index",
+    "pages/index/index",
     "pages/coupons/index",
     "pages/mycoupons/index",
     "pages/authorize/index",
@@ -37,15 +38,18 @@
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "box-shadow": "0 0 6px 0",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "iconPath": "images/nav/home-off.png",
         "selectedIconPath": "images/nav/home-on.png"
-      }, {
+      },
+      {
         "pagePath": "pages/goods/goods",
         "iconPath": "images/nav/goods-off.png",
         "selectedIconPath": "images/nav/goods-on.png"
-      }, {
+      },
+      {
         "pagePath": "pages/shop-cart/index",
         "iconPath": "images/nav/cart-off.png",
         "selectedIconPath": "images/nav/cart-on.png"
