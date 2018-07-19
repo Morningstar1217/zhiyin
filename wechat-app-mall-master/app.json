@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/column/index",
     "pages/column-detail/index",
-    "pages/index/index",
     "pages/coupons/index",
     "pages/mycoupons/index",
     "pages/authorize/index",
