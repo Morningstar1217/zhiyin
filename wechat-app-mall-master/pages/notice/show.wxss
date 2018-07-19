@@ -1,15 +1,16 @@
 .notice {
-  width: 750rpx;
-  padding: 15rpx;
+  width: 98%;
+  padding: 0 1%;
   font-size: 25rpx;
   margin-top: 120rpx;
 }
+
 .title {
-  color:chocolate;
+  color: chocolate;
   font-size: 38rpx;
   margin-bottom: 30rpx;
 }
 
-.author{
+.author {
   margin-bottom: 40rpx;
 }
