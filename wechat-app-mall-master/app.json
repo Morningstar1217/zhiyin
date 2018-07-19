@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/column/index",
     "pages/coupons/index",
     "pages/mycoupons/index",
     "pages/authorize/index",
@@ -21,8 +22,7 @@
     "pages/kanjia/index",
     "pages/start/start",
     "pages/fav/fav",
-    "pages/bargain/index",
-    "pages/column/index"
+    "pages/bargain/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

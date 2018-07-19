@@ -1,1 +1,44 @@
 /* pages/column/index.wxss */
+
+@import "../index/index.wxss";
+.container {
+    margin-top: 120rpx;
+    background: #fff;
+}
+
+.columnList {
+    width: 100%;
+    overflow: hidden;
+}
+
+.columnWrap {
+    width: 96%;
+    /* height: 460rpx; */
+    margin: 20rpx auto;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.columnWrap image {
+    width: 100%;
+    height: 400rpx;
+    border-radius: 10rpx;
+}
+
+.columnTitle {
+    width: 98%;
+    color: #333;
+    font-size: 28rpx;
+    text-indent: .2em;
+}
+
+.title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.date {
+    font-size: 20rpx;
+}
