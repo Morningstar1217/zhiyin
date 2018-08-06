@@ -5,6 +5,7 @@
         <scroll-view scroll-x class="colTypeWrapSwiper">
             <view class="colType" wx:for="{{columnType}}" wx:key="id" style="background-image:url('{{item.icon}}')" data-id="{{item.id}}" bind:tap="changeType">
                 <text>{{item.name}}</text>
+                <view class="wrap"></view>
             </view>
         </scroll-view>
     </view>
